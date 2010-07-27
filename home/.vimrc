@@ -4,16 +4,25 @@ call pathogen#helptags()
 
 colorscheme vividchalk
 
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:˽
 nmap <leader>l :set list!<CR>
 
-set hlsearch
-set incsearch
-set ignorecase
-
-set number
+set ruler          " show the cursor position
+set incsearch      " do incremental searching
+set ignorecase     " ignore case while searching
+set smartcase
+"set nowrap         " turn off long line wrapping
+set number         " show line number
 setlocal numberwidth=5
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -35,9 +44,13 @@ if has("autocmd")
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \   exe "normal g`\"" |
         \ endif
+else
+  set autoindent
 endif " has("autocmd")
 
+" If the terminal has colors, or in GUI mode
 if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
+  set hlsearch
 endif

@@ -4,3 +4,12 @@
 [submodule "home/.vim/bundle/vim-vividchalk"]
 	path = home/.vim/bundle/vim-vividchalk
 	url = http://github.com/tpope/vim-vividchalk.git
+[submodule "home/.vim/bundle/vim-rails"]
+	path = home/.vim/bundle/vim-rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "home/.vim/bundle/vim-haml"]
+	path = home/.vim/bundle/vim-haml
+	url = http://github.com/tpope/vim-haml.git
+[submodule "home/.vim/bundle/vim-cucumber"]
+	path = home/.vim/bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
